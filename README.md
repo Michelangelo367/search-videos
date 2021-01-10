@@ -1,2 +1,3 @@
 # search-videos
-A python script for interacting with the Youtube API and searching for videos in diefferent ways anf with different filters.
+
+A python script for interacting with the Youtube API and searching for videos in different ways and with different filters.
