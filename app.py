@@ -8,12 +8,16 @@ import googleapiclient.discovery
 import googleapiclient.errors
 
 scopes = ["https://www.googleapis.com/auth/youtube.readonly"]
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+VIDEOS_DIR = os.path.join(BASE_DIR, 'videos_set')
 
 
 def main():
     # Disable OAuthlib's HTTPS verification when running locally.
     # *DO NOT* leave this option enabled in production.
     os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "1"
+    if not os.path.exists(VIDEOS_DIR):
+        os.mkdir(VIDEOS_DIR)
 
     api_service_name = "youtube"
     api_version = "v3"
